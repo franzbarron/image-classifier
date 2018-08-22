@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Image Classifier | Francisco Barrón</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://unpkg.com/ml5@0.1.1/dist/ml5.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #bbf1f3;
+            color: black;
+            font-family: Candara, Arial, sans-serif;
+            font-size: 1em;
+        }
+
+        div {
+            font-size: 1.4em;
+        }
+
+        .column-left {
+            float: left;
+            padding-left: 2%;
+            padding-right: 0%;
+            width: 28%;
+        }
+
+        .column-right {
+            margin: 0;
+            float: right;
+            width: 70%;
+            padding-top: 6%;
+            margin-bottom: 3%;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #canvas {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Lucida Bright', Georgia, serif;
+            font-size: 2.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column-left">
+            <h1 align="center">Image Classifier</h1>
+            <div align="center" style="margin-top: 15%">
+                Status:
+                <span id="status">Loading...</span>
+                <p></p>
+            </div>
+        </div>
+        <div class="column-right">
+            <p></p>
+            <div id="canvas"></div>
+            <div id="button" align="center">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div id="info" align="center">
+        <p></p>
+        This tool was created with
+        <a href="http://p5js.org">p5.js</a> and
+        <a href="http://ml5js.org">ml5js</a>. The model used is
+        <a href="https://github.com/tensorflow/tfjs-models/tree/master/mobilenet">MobileNet</a>.
+    </div>
+</body>
+
+</html>
